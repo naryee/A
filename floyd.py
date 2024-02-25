@@ -1,15 +1,10 @@
-
 class ListNode:
-
     def __init__(self, x):
-       
         self.val = x
         self.next = None
 
-def detectCycle(head: ListNode) -> ListNode:
-  
-    def intersect(slow: ListNode, fast: ListNode) -> ListNode:
-       
+def detectCycle(head):
+    def intersect(slow, fast):
         if not fast or not fast.next:
             return None
         slow = slow.next
@@ -32,3 +27,4 @@ def detectCycle(head: ListNode) -> ListNode:
         ptr2 = ptr2.next
 
     return ptr1
+
